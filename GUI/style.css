@@ -1,0 +1,41 @@
+body{
+    background-color: aqua;
+}
+h1{
+    margin: 10px;
+    text-align:center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color: #ffffff;
+}
+.text{
+    font: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.center{
+    text-align: center; 
+}
+p{
+    text-align: center;
+    margin:15px;
+}
+.input{
+    margin: 20px;
+    padding: 5px;
+}
+.radio{
+    padding:5px;
+}
+.radio2{
+    display: inline-block;
+     vertical-align: top;
+     margin-right: 3%;
+ }
+ .radio1{
+    display: inline-block;
+     vertical-align: top;
+ }
+.btn{
+    margin: 4px;
+    background-color: #563d74!important;
+}
