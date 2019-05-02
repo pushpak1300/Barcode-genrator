@@ -11,6 +11,7 @@ h1{
 .text{
     font: bold;
     font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
 }
 .center{
     text-align: center; 

@@ -1,0 +1,2 @@
+python-barcode
+img2pdf

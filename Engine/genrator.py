@@ -32,7 +32,7 @@ if etype.upper() =="PDF":
     POINTER= pointer(u''+text+'', writer=ImageWriter())
     filepath="Barcodes\\"+text
     POINTER.save(filepath)
-    with open("Barcodes\\sp"+text+".pdf","wb") as f:
+    with open("Barcodes\\"+text+".pdf","wb") as f:
         f.write(img2pdf.convert('Barcodes\\'+text+'.png'))
 
 sys.stdout.flush()
