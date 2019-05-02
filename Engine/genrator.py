@@ -22,18 +22,18 @@ pointer=get_barcode_class(btype)
 
 if etype.upper() =="SVG":
     POINTER=pointer(u''+text+'')
-    filepath="Barcodes/"+text
+    filepath="Barcodes\\"+text
     POINTER.save(filepath)
 if etype.upper() =="PNG":
     POINTER= pointer(u''+text+'', writer=ImageWriter())
-    filepath="Barcodes/"+text
+    filepath="Barcodes\\"+text
     POINTER.save(filepath)
 if etype.upper() =="PDF":
     POINTER= pointer(u''+text+'', writer=ImageWriter())
-    filepath="Barcodes/"+text
+    filepath="Barcodes\\"+text
     POINTER.save(filepath)
-    with open("Barcodes/"+text+".pdf","wb") as f:
-        f.write(img2pdf.convert('Barcodes/'+text+'.png'))
+    with open("Barcodes\\sp"+text+".pdf","wb") as f:
+        f.write(img2pdf.convert('Barcodes\\'+text+'.png'))
 
 sys.stdout.flush()
 

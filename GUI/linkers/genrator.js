@@ -1,27 +1,24 @@
+let {PythonShell} = require('python-shell')
+var path = require("path")
+
 function genrate_barcode(){
-    var puthon =require("python-shell")
-    var path =require("path")
 
     var TEXT=document.getElementById("TEXT").value;
     document.getElementById("TEXT").value="";
     var TYPE=document.getElementById("TYPE").value;
-    document.getElementById("TYPE").value="Choose...";
-    var rates = document.getElementById('etype').value;
-    var rate_value;
-    if(rates =='PNG'){
-        rate_value = document.getElementById('radio1').value;
-
-    }else if(rates =='SVG'){
-        rate_value = document.getElementById('radio2').value;
-
-    }else if(rates =='PDF'){
-        rate_value = document.getElementById('radio3').value;
-    }  
-
-    document.getElementById('results').innerHTML = rate_value;
-    }
+    document.getElementById("TYPE").value="Choose Barcode Type";
+    var ETYPE=document.getElementById("ETYPE").value;
+    document.getElementById("ETYPE").value="Choose Export Type";
     var options={
-        scriptPath:path.join(__dirname,'/../engine/')
-        args:[TYPE,TEXT,rate_value]
+       scriptPath : path.join(__dirname, '/../Engine/'),
+       args:[TYPE,TEXT,ETYPE]
+       
     }
-    var genrator=new python('genrator.py',options);
+
+  
+
+  var pyshell=new PythonShell('genrator.py',options);
+  pyshell.on('message', function(message){
+    console.log(message);
+});
+}

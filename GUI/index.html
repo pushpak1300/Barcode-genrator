@@ -10,6 +10,10 @@
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <title>BARCODE GENRATOR</title>
+
+
+
+   <script src="linkers/genrator.js"></script>
 </head>
 
 <body>
@@ -21,11 +25,11 @@
    <div class="container form-group">
       <p for="TYPE" class="text">BARCODE TYPE:</p>
       <select id="TYPE" class="form-control input">
-         <option selected>Choose...</option>
+         <option selected>Choose Barcode Type</option>
          <option>CODE39</option>
          <option>CODE128</option>
          <option>EAN13</option>
-         <option>ISBN<EAN8/option> 
+         <option>ISBN</option> 
          <option>ISBN13</option>
          <option>UPCA</option>
       </select>
@@ -35,22 +39,16 @@
       <input type="text" id="TEXT" class="form-control input" value="FOR CODE39 and CODE128 YOU CAN SELECT TEXT">
       </input>
    </div>
-   <div class="container center form-group" id="etype">
-      <p for="TEXT" class="text">EXPORT TYPE :</p>
-      <div class="container">
-         <div class="form-check form-check-inline center">
-            <input class="form-check-input radio1" type="radio" name="PNG" id="radio1" value="PNG">
-            <label class="form-check-label radio2" for="radio1">PNG</label>
-         </div>
-         <div class="form-check form-check-inline center">
-            <input class="form-check-input radio1" type="radio" name="SVG" id="radio2" value="SVG">
-            <label class="form-check-label radio2 " for="radio2">SVG</label>
-         </div>
-         <div class="form-check form-check-inline">
-            <input class="form-check-input radio1" type="radio" name="PDF" id="radio3" value="PDF">
-            <label class="form-check-label radio2" for="radio3">PDF</label>
-         </div>
-      </div>
+   <div class="container form-group">
+      <p for="ETYPE" class="text">EXPORT TYPE:</p>
+      <select id="ETYPE" class="form-control input">
+         <option selected>Choose ExportFile Type</option>
+         <option>PNG</option>
+         <option>SVG</option>
+         <option>PDF</option>
+      </select>
+   </div>
+   
 
    </div>
    <div class="container center sumbit">
@@ -67,7 +65,7 @@
 
    <!-- Optional JavaScript -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   <script src="linkers/genrator.js"></script>
+   
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
    </script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
